@@ -1,0 +1,17 @@
+html {
+  color-scheme: light dark;
+  block-size: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1e1e1e;
+  min-block-size: 100%;
+  display: grid;
+  place-content: center;
+}
