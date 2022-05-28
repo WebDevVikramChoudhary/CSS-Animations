@@ -1,0 +1,33 @@
+/*GENERAL------------------------*/
+body {
+  margin: 0;
+  padding: 0;
+}
+.box {
+  flex: 1 1 auto;
+  display: flex;
+  width: 100wv;
+  height: 100vh;
+}
+svg {
+  width: 400px;
+  height: 400px;
+  display: block;
+  margin: auto;
+}
+
+/*BACKGROUND-COLORS---------------*/
+.black {
+  background-color: #000;
+}
+
+@keyframes rotacion3 {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.girar3 {
+  animation: rotacion3 4s cubic-bezier(0.67, 0.09, 0.01, 1.68) infinite
+    alternate;
+  transform-origin: center center;
+}
