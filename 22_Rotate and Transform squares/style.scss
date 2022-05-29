@@ -1,0 +1,47 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background: linear-gradient(130deg, #0479c3 0%, #00d4ff 50%, #0485cb 100%);
+}
+
+.wrapper {
+  height: 100vh;
+}
+
+.square {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  border: 3px solid white;
+  margin: auto;
+  height: 20rem;
+  width: 20rem;
+}
+
+$squares-number: 17;
+
+@for $i from 0 through $squares-number {
+  .r-#{$i} {
+    animation-name: r + $i;
+  }
+
+  @keyframes r#{$i} {
+    50% {
+      border-radius: 50%;
+      transform: rotate(270deg - (10 * $i));
+      height: 6rem;
+    }
+  }
+}
