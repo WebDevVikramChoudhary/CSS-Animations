@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Sanskrit&display=swap");
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000000;
+  color: #c23616;
+  font: 5em "Tiro Devanagari Sanskrit", serif;
+  margin: 0;
+  max-height: 100vh;
+  text-transform: uppercase;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div {
+  animation: animate 5s linear infinite forwards;
+}
+
+@keyframes animate {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.1);
+  }
+  45% {
+    transform: scale(1.4) skewX(-20deg);
+  }
+  90% {
+    transform: scale(1.1) skewX(-50deg);
+  }
+  100% {
+    transform: scale(1) skewX(-90deg);
+  }
+}
