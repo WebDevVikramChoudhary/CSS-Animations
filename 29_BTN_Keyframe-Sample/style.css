@@ -1,0 +1,40 @@
+body {
+  background: #000000;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.circle {
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #efeb24;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #1d1f20;
+  animation: 1.5s linear 0s infinite normal pulse;
+}
+.circle:hover {
+  animation: none;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(0.9);
+    box-shadow: 0px 1px 0px 3px #aba81a30, 0px 0px 0px 0px #efeb2450;
+  }
+  30% {
+    box-shadow: 0px 1px 0px 3px #aba81a30, 0px 0px 0px 25px #efeb2450;
+  }
+  70% {
+    box-shadow: 0px 1px 0px 3px #aba81a30, 0px 0px 0px 75px #efeb2410;
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 1px 1px 3px 1px #aba81a30, 0px 0px 0px 100px transparent;
+  }
+}
