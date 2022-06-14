@@ -1,0 +1,112 @@
+.container {
+  margin: 20px 0;
+  width: 100vw;
+}
+
+.eye-outer {
+  width: 200px;
+  height: 200px;
+  border-radius: 100% 0;
+  background: #e84501;
+  margin: auto;
+  transform: rotate(45deg);
+  position: relative;
+  overflow: hidden;
+}
+
+.eye-outer::before {
+  content: "";
+  position: absolute;
+  width: 360px;
+  height: 100px;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+  background: #d74200;
+  top: -65px;
+  right: -18px;
+  transform: rotate(315deg);
+  animation: closeDown 2.5s ease infinite;
+  z-index: 900;
+}
+
+@keyframes closeDown {
+  10% {
+    top: 41px;
+  }
+  11%,
+  100% {
+    top: -67px;
+  }
+}
+
+.eye-outer::after {
+  content: "";
+  position: absolute;
+  width: 360px;
+  height: 100px;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+  background: #d74200;
+  bottom: -60px;
+  transform: rotate(135deg);
+  left: -20px;
+  animation: closeUp 2.5s ease infinite;
+}
+
+@keyframes closeUp {
+  10% {
+    bottom: 36px;
+  }
+  11%,
+  100% {
+    bottom: -60px;
+  }
+}
+
+.eye-inner {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #fff;
+  position: absolute;
+  top: 47px;
+  left: 53px;
+  animation: rotate 1.5s ease infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(360deg) translate(0, 0px) rotate(-360deg);
+  }
+  25% {
+    transform: rotate(360deg) translate(-15px, 15px) rotate(360deg);
+  }
+  50% {
+    transform: rotate(360deg) translate(0px, 10px) rotate(-360deg);
+  }
+  75% {
+    transform: rotate(360deg) translate(15px, -15px) rotate(-360deg);
+  }
+  100% {
+    transform: rotate(360deg) translate(-2px, -2px) rotate(-360deg);
+  }
+}
+
+.inner-circle {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  background: #82320f;
+  margin: 12px;
+}
+
+/* a {
+    cursor: url(https://jenniferheintz.com/assets/circle-cursor@2x.png) 8 8,auto;
+  } */
+
+.eye {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #000;
+}
