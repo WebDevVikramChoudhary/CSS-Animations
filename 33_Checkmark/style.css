@@ -1,0 +1,20 @@
+.checkmark {
+  max-width: 40px;
+}
+
+.check {
+  stroke-dasharray: 116;
+  stroke-dashoffset: 0;
+  animation: checked 3s linear alternate infinite;
+}
+
+@keyframes checked {
+  0%,
+  100% {
+    stroke-dashoffset: 116;
+  }
+  30%,
+  70% {
+    stroke-dashoffset: 0;
+  }
+}
